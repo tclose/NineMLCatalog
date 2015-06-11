@@ -19,7 +19,7 @@
     <Parameter name="Bbeta" dimension="concentration"/>
     <Parameter name="Kbeta" dimension="voltage"/>
     <Parameter name="gbar" dimension="conductanceDensity"/>
-    <AnalogReceivePort name="internalCa" dimension="currentDensity"/>
+    <AnalogReceivePort name="internalCa" dimension="concentration"/>
     <AnalogReceivePort name="temperature" dimension="temperature"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     <AnalogReceivePort name="v" dimension="voltage"/>

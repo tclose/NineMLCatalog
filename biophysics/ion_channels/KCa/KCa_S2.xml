@@ -12,21 +12,21 @@
   <Unit symbol="K" dimension="temperature" power="0"/>
   <Dynamics name="KCa_S2">
     <Parameter name="diff" dimension="concentration"/>
-    <Parameter name="invc1" dimension="dimensionless"/>
-    <Parameter name="invc2" dimension="dimensionless"/>
-    <Parameter name="invc3" dimension="dimensionless"/>
-    <Parameter name="invo1" dimension="dimensionless"/>
-    <Parameter name="invo2" dimension="dimensionless"/>
-    <Parameter name="diro1" dimension="dimensionless"/>
-    <Parameter name="diro2" dimension="dimensionless"/>
-    <Parameter name="dirc2" dimension="dimensionless"/>
-    <Parameter name="dirc3" dimension="dimensionless"/>
-    <Parameter name="dirc4" dimension="dimensionless"/>
+    <Parameter name="invc1" dimension="per_time"/>
+    <Parameter name="invc2" dimension="per_time"/>
+    <Parameter name="invc3" dimension="per_time"/>
+    <Parameter name="invo1" dimension="per_time"/>
+    <Parameter name="invo2" dimension="per_time"/>
+    <Parameter name="diro1" dimension="per_time"/>
+    <Parameter name="diro2" dimension="per_time"/>
+    <Parameter name="dirc2" dimension="per_time"/>
+    <Parameter name="dirc3" dimension="per_time"/>
+    <Parameter name="dirc4" dimension="per_time"/>
     <Parameter name="e_reversal" dimension="voltage"/>
     <Parameter name="gbar" dimension="conductanceDensity"/>
     <AnalogReceivePort name="temperature" dimension="temperature"/>
-    <AnalogSendPort name="g" dimension="conductanceDensity"/>
-    <AnalogReceivePort name="internalCa" dimension="currentDensity"/>    
+    <AnalogSendPort name="i" dimension="currentDensity"/>
+    <AnalogReceivePort name="internalCa" dimension="concentration"/>    
     <AnalogReceivePort name="v" dimension="voltage"/>
     <Alias name="i">
       <MathInline>gbar * (o1 + o2) * (v - e_reversal)</MathInline>
@@ -91,7 +91,7 @@
       <MathInline>invo2_t * o2</MathInline>
     </Alias>
     <Alias name="Q10">
-      <MathInline>pow(3, ((temperature - 23) / 10))</MathInline>
+      <MathInline>pow(3, ((temperature - reference_temperature) / ten_degrees))</MathInline>
     </Alias>
     <Alias name="invc1_t">
       <MathInline>invc1 * Q10</MathInline>

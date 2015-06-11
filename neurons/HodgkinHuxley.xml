@@ -6,6 +6,7 @@
   <Dimension name="specificCapacitance" m="-1" l="-4" t="4" i="2"/>
   <Dimension name="current" i="1"/>
   <Dimension name="temperature" k="1"/>
+  <Dimension name="dimensionless"/>
   <Dynamics name="HodgkinHuxley">
     <Annotations>
       <Description>This class is a </Description></Annotations>

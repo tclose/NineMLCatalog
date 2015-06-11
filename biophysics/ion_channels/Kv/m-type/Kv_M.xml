@@ -7,6 +7,8 @@
   <Dimension name="temperature" k="1"/>
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
+  <Dimension name="concentration" l="-3" n="1"/>
+  <Dimension name="dimensionless"/>
   <Dynamics name="Kv_M">
     <Parameter name="Aalpha" dimension="per_time"/>
     <Parameter name="Kalpha" dimension="voltage"/>

@@ -62,7 +62,7 @@
             <MathInline>1 / (1 + exp((v - Ehalf) * c))</MathInline>
         </Alias>            
         <Alias name="trunc_r">
-            <MathInline>0.0 ? v &gt; upperTruncationVoltage : (1.0 ? v &lt; lowerTruncationVoltage : r)</MathInline>
+            <MathInline>v &gt; upperTruncationVoltage ? 0.0 : v &lt; lowerTruncationVoltage ? 1.0 : r)</MathInline>
         </Alias>
         <Alias name="r">
             <MathInline>(rA * v) + rB</MathInline>

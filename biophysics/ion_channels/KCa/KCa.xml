@@ -9,6 +9,8 @@
   <Dimension name="currentDensity" i="1" l="-2"/>
   <Dimension name="concentration" l="-3" n="1"/>
   <Dimension name="dimensionless"/>
+  <Unit symbol="celsius" dimension="temperature" power="0" offset="273.15"/>
+  <Unit symbol="K" dimension="temperature" power="0"/>
   <Dynamics name="KCa">
     <Parameter name="Aalpha" dimension="per_time"/>
     <Parameter name="Balpha" dimension="concentration"/>
@@ -20,34 +22,36 @@
     <AnalogReceivePort name="internalCa" dimension="currentDensity"/>
     <AnalogReceivePort name="temperature" dimension="temperature"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
-    
-      <StateVariable name="m" dimension="dimensionless">
-        <Initial>m_inf</Initial>
-      </StateVariable>
-      <Alias name="g">
-        <MathInline>gbar * m</MathInline>
-      </Alias>
-      <Regime name="default">
-        <TimeDerivative variable="m">
-          <MathInline>(m_inf - m) / tau</MathInline>
-        </TimeDerivative>
-      </Regime>
-      <Alias name="Q10">
-        <MathInline>pow(3, (temperature - 30) / 10)</MathInline>
-      </Alias>
-      <Alias name="m_inf">
-        <MathInline>alpha / (alpha + beta)</MathInline>
-      </Alias>
-      <Alias name="tau">
-        <MathInline>1 / (alpha + beta)</MathInline>
-      </Alias>
-      <Alias name="alpha">
-        <MathInline>(Q10 * Aalpha / (1 + (Balpha * exp(v / Kalpha) /
-          internalCa))) </MathInline>
-      </Alias>
-      <Alias name="beta">
-        <MathInline>(Q10 * Abeta / (1 + (internalCa / (Bbeta * exp(v /
-          Kbeta))))) </MathInline>
-      </Alias>
-    </Dynamics>
+    <AnalogReceivePort name="v" dimension="voltage"/>
+    <StateVariable name="m" dimension="dimensionless">
+      <Initial>m_inf</Initial>
+    </StateVariable>
+    <Alias name="g">
+      <MathInline>gbar * m</MathInline>
+    </Alias>
+    <Regime name="default">
+      <TimeDerivative variable="m">
+        <MathInline>(m_inf - m) / tau</MathInline>
+      </TimeDerivative>
+    </Regime>
+    <Alias name="Q10">
+      <MathInline>pow(3, (temperature - reference_temperature) / ten_degrees)</MathInline>
+    </Alias>
+    <Alias name="m_inf">
+      <MathInline>alpha / (alpha + beta)</MathInline>
+    </Alias>
+    <Alias name="tau">
+      <MathInline>1 / (alpha + beta)</MathInline>
+    </Alias>
+    <Alias name="alpha">
+      <MathInline>(Q10 * Aalpha / (1 + (Balpha * exp(v / Kalpha) /
+        internalCa))) </MathInline>
+    </Alias>
+    <Alias name="beta">
+      <MathInline>(Q10 * Abeta / (1 + (internalCa / (Bbeta * exp(v /
+        Kbeta))))) </MathInline>
+    </Alias>
+    <Constant name="reference_temperature" value="30" units="celsius"/>
+    <Constant name="ten_degrees" value="10" units="K"/>
+  </Dynamics>
 </NineML>

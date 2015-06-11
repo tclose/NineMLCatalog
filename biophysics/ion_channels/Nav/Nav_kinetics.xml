@@ -7,7 +7,7 @@
   <Dimension name="temperature" k="1"/>
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
-  <Dynamics name="Na_kinetics">
+  <Dynamics name="Nav_kinetics">
     <Parameter name="Aalfa" dimension="per_time"/>
     <Parameter name="Valfa" dimension="voltage"/>
     <Parameter name="Abeta" dimension="per_time"/>

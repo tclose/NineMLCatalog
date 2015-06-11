@@ -7,6 +7,7 @@
   <Dimension name="temperature" k="1"/>
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
+  <Dimension name="dimensionless"/>
   <Dynamics name="Nav_nernst" xmlns="http://nineml.net/9ML/1.0">
     <Parameter name="gbar" dimension="conductanceDensity"/>
     <Parameter name="Aalpha_m" dimension="per_time"/>

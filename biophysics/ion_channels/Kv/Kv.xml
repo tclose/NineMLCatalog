@@ -7,7 +7,8 @@
   <Dimension name="temperature" k="1"/>
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
-  <Dynamics name="KV">
+  <Dimension name="dimensionless"/>
+  <Dynamics name="Kv">
     <Parameter name="Aalpha" dimension="per_time"/>
     <Parameter name="Kalpha" dimension="voltage"/>
     <Parameter name="V0alpha" dimension="voltage"/>
@@ -19,7 +20,7 @@
     <AnalogReceivePort name="v" dimension="voltage"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     
-      <StateVariable name="m">
+      <StateVariable name="m" dimension="dimensionless">
         <Initial>m_inf</Initial>
       </StateVariable>
       <Alias name="g">

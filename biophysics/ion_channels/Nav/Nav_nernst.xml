@@ -7,7 +7,7 @@
   <Dimension name="temperature" k="1"/>
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
-  <Dynamics name="NavNernst" xmlns="http://nineml.net/9ML/1.0">
+  <Dynamics name="Nav_nernst" xmlns="http://nineml.net/9ML/1.0">
     <Parameter name="gbar" dimension="conductanceDensity"/>
     <Parameter name="Aalpha_m" dimension="per_time"/>
     <Parameter name="Kalpha_m" dimension="voltage"/>
@@ -25,10 +25,10 @@
     <AnalogReceivePort name="v" dimension="voltage"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     
-      <StateVariable name="m">
+      <StateVariable name="m" dimension="dimensionless">
         <Initial>m_inf</Initial>
       </StateVariable>
-      <StateVariable name="h">
+      <StateVariable name="h" dimension="dimensionless">
         <Initial>h_inf</Initial>
       </StateVariable>
       <Regime name="default">

@@ -22,7 +22,7 @@
     <AnalogReceivePort name="v" dimension="voltage"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     
-      <StateVariable name="m">
+      <StateVariable name="m" dimension="dimensionless">
         <Initial>(1 / (1 + exp((neg(v - V0_minf)) / B_minf)))</Initial>
       </StateVariable>
       <Alias name="g">

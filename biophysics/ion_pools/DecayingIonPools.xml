@@ -8,20 +8,21 @@
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
   <Dimension name="concentration" l="-3" n="1"/>
+  <Dimension name="dimensionless"/>
   <Dynamics name="DecayingIonPools">
     <Parameter name="diameter" dimension="length"/>
     <Parameter name="steadyStateInternal" dimension="concentration"/>
     <Parameter name="steadyStateExternal" dimension="concentration"/>
-    <Parameter name="ionValence"/>
+    <Parameter name="ionValence" dimension="dimensionless"/>
     <Parameter name="beta" dimension="per_time"/>    
     <AnalogReceivePort name="temperature" dimension="temperature"/>
     <AnalogReceivePort name="g" dimension="conductanceDensity"/>
     <AnalogSendPort name="i" dimension="currentDensity"/>
     
-      <StateVariable name="internalC">
+      <StateVariable name="internalC" dimension="dimensionless">
         <Initial>steadyStateInternal</Initial>
       </StateVariable>
-      <StateVariable name="externalC">
+      <StateVariable name="externalC" dimension="dimensionless">
         <Initial>steadyStateExternal</Initial>
       </StateVariable>
       <Alias name="i">

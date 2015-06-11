@@ -13,16 +13,16 @@
     <Parameter name="diameter" dimension="length"/>
     <Parameter name="steadyStateInternal" dimension="concentration"/>
     <Parameter name="steadyStateExternal" dimension="concentration"/>
-    <Parameter name="ionValence"/>
+    <Parameter name="ionValence" dimension="dimensionless"/>
     <Parameter name="beta" dimension="per_time"/>    
     <AnalogReceivePort name="temperature" dimension="temperature"/>
     <AnalogReceivePort name="g" dimension="conductanceDensity"/>
     <AnalogSendPort name="i" dimension="currentDensity"/>
     
-      <StateVariable name="internalC">
+      <StateVariable name="internalC" dimension="dimensionless">
         <Initial>steadyStateInternal</Initial>
       </StateVariable>
-      <StateVariable name="externalC">
+      <StateVariable name="externalC" dimension="dimensionless">
         <Initial>steadyStateExternal</Initial>
       </StateVariable>
       <Alias name="i">

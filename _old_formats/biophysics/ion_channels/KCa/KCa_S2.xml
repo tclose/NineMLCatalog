@@ -10,16 +10,16 @@
   <Dimension name="concentration" l="-3" n="1"/>
   <ComponentClass name="SK2def">
     <Parameter name="diff" dimension="concentration"/>
-    <Parameter name="invc1"/>
-    <Parameter name="invc2"/>
-    <Parameter name="invc3"/>
-    <Parameter name="invo1"/>
-    <Parameter name="invo2"/>
-    <Parameter name="diro1"/>
-    <Parameter name="diro2"/>
-    <Parameter name="dirc2"/>
-    <Parameter name="dirc3"/>
-    <Parameter name="dirc4"/>
+    <Parameter name="invc1" dimension="dimensionless"/>
+    <Parameter name="invc2" dimension="dimensionless"/>
+    <Parameter name="invc3" dimension="dimensionless"/>
+    <Parameter name="invo1" dimension="dimensionless"/>
+    <Parameter name="invo2" dimension="dimensionless"/>
+    <Parameter name="diro1" dimension="dimensionless"/>
+    <Parameter name="diro2" dimension="dimensionless"/>
+    <Parameter name="dirc2" dimension="dimensionless"/>
+    <Parameter name="dirc3" dimension="dimensionless"/>
+    <Parameter name="dirc4" dimension="dimensionless"/>
     <Parameter name="gbar" dimension="conductanceDensity"/>
     <AnalogReceivePort name="temperature" dimension="temperature"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>

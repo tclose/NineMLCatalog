@@ -7,6 +7,7 @@
   <Dimension name="temperature" k="1"/>
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
+  <Dimension name="dimensionless"/>
   <Dynamics name="Nav_R">
     <Parameter name="Aalpha_m" dimension="per_time"/>
     <Parameter name="V0alpha_m" dimension="voltage"/>
@@ -27,10 +28,10 @@
     <AnalogReceivePort name="v" dimension="voltage"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     
-      <StateVariable name="m">
+      <StateVariable name="m" dimension="dimensionless">
         <Initial>m_inf</Initial>
       </StateVariable>
-      <StateVariable name="h">
+      <StateVariable name="h" dimension="dimensionless">
         <Initial>h_inf</Initial>
       </StateVariable>
       <Regime name="default">

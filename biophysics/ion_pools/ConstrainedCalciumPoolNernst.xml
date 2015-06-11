@@ -8,7 +8,8 @@
   <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
   <Dimension name="currentDensity" i="1" l="-2"/>
   <Dimension name="concentration" l="-3" n="1"/>
-  <Dynamics name="ConstrainedCalciumPool">
+  <Dimension name="dimensionless"/>
+  <Dynamics name="ConstrainedCalciumPoolNernst">
     <Parameter name="diameter" dimension="length"/>
     <Parameter name="steadyStateInternalC" dimension="concentration"/>
     <Parameter name="externalC" dimension="concentration"/>
@@ -19,7 +20,7 @@
     <AnalogSendPort name="i" dimension="currentDensity"/>
     <AnalogSendPort name="internalC" dimension="concentration"/>
     
-      <StateVariable name="internalC">
+      <StateVariable name="internalC" dimension="dimensionless">
         <Initial>steadyStateInternal</Initial>
       </StateVariable>
       <Regime name="default">

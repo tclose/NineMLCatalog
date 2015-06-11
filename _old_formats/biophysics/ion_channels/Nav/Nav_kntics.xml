@@ -22,10 +22,10 @@
     <Parameter name="ACoff" dimension="per_time"/>
     <Parameter name="AOon" dimension="per_time"/>
     <Parameter name="AOoff" dimension="per_time"/>
-    <Parameter name="n1"/>
-    <Parameter name="n2"/>
-    <Parameter name="n3"/>
-    <Parameter name="n4"/>
+    <Parameter name="n1" dimension="dimensionless"/>
+    <Parameter name="n2" dimension="dimensionless"/>
+    <Parameter name="n3" dimension="dimensionless"/>
+    <Parameter name="n4" dimension="dimensionless"/>
     <Parameter name="gbar" dimension="conductanceDensity"/>
     <AnalogReceivePort name="temperature" dimension="temperature"/>
     <AnalogReceivePort name="v" dimension="voltage"/>

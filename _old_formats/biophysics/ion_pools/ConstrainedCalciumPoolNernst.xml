@@ -20,7 +20,7 @@
     <AnalogSendPort name="i" dimension="currentDensity"/>
     <AnalogSendPort name="internalC" dimension="concentration"/>
     
-      <StateVariable name="internalC">
+      <StateVariable name="internalC" dimension="dimensionless">
         <Initial>steadyStateInternal</Initial>
       </StateVariable>
       <Regime name="default">

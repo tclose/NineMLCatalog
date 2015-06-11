@@ -6,6 +6,7 @@
     <Dimension name="voltage" m="1" l="2" t="-3" i="-1"/>
     <Dimension name="per_voltage" m="-1" l="-2" t="3" i="1"/>  
     <Dimension name="temperature" k="1"/>
+    <Dimension name="dimensionless"/>
     <Dimension name="conductanceDensity" m="-1" l="-4" t="3" i="2"/>
     <Dimension name="currentDensity" i="1" l="-2"/>
     <Dimension name="concentration" l="-3" n="1"/>
@@ -15,21 +16,21 @@
         <Parameter name="Ehalf" dimension="voltage"/>
         <Parameter name="c" dimension="per_voltage"/>
         <Parameter name="rA" dimension="per_voltage"/>
-        <Parameter name="rB"/>
-        <Parameter name="tCs"/>
+        <Parameter name="rB" dimension="dimensionless"/>
+        <Parameter name="tCs" dimension="dimensionless"/>
         <Parameter name="tDs" dimension="voltage"/>
         <Parameter name="tEs" dimension="per_voltage"/>
-        <Parameter name="tCf"/>
+        <Parameter name="tCf" dimension="dimensionless"/>
         <Parameter name="tDf" dimension="per_voltage"/>
         <Parameter name="tEf" dimension="voltage"/>
-        <Paramater name="upperTruncationVoltage" dimension="voltage"/>
-        <Paramater name="lowerTruncationVoltage" dimension="voltage"/>      
+        <Parameter name="upperTruncationVoltage" dimension="voltage"/>
+        <Parameter name="lowerTruncationVoltage" dimension="voltage"/>      
         <AnalogReceivePort name="v" dimension="voltage"/>
         <AnalogSendPort name="g" dimension="conductanceDensity"/>        
-        <StateVariable name="o_slow">
+        <StateVariable name="o_slow" dimension="dimensionless">
             <Initial>o_slow_inf</Initial>
         </StateVariable>
-        <StateVariable name="o_fast">
+        <StateVariable name="o_fast" dimension="dimensionless">
             <Initial>o_fast_inf</Initial>
         </StateVariable>
         <Regime name="default">            

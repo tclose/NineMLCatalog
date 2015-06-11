@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <NineML xmlns="http://nineml.net/9ML/1.0">
   <Component name="Layout on a two-dimensional grid">
-    <Parameter name="fillOrder"/>
-    <Parameter name="aspectRatioXY"/>
-    <Parameter name="dx"/>
-    <Parameter name="dy"/>
-    <Parameter name="x0"/>
-    <Parameter name="y0"/>
+    <Parameter name="fillOrder" dimension="dimensionless"/>
+    <Parameter name="aspectRatioXY" dimension="dimensionless"/>
+    <Parameter name="dx" dimension="dimensionless"/>
+    <Parameter name="dy" dimension="dimensionless"/>
+    <Parameter name="x0" dimension="dimensionless"/>
+    <Parameter name="y0" dimension="dimensionless"/>
   </Component>
 </NineML>

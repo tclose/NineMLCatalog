@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <NineML xmlns="http://nineml.net/9ML/1.0">
   <Component name="CondExpSynapse">
-    <Parameter name="g_bar"/>
-    <Parameter name="tau"/>
-    <Parameter name="E"/>
-    <Parameter name="W"/>
+    <Parameter name="g_bar" dimension="dimensionless"/>
+    <Parameter name="tau" dimension="dimensionless"/>
+    <Parameter name="E" dimension="dimensionless"/>
+    <Parameter name="W" dimension="dimensionless"/>
     <AnalogSendPort name="t"/>
     <analog-port symbol="Isyn" expression="g_bar*g*(V-E)" mode="send"/>
     <AnalogReceivePort name="V"/>

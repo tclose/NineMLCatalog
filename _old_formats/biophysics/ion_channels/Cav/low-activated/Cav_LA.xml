@@ -15,13 +15,13 @@
     <Parameter name="v0_h_inf" dimension="voltage"/>
     <Parameter name="k_m_inf" dimension="voltage"/>
     <Parameter name="k_h_inf" dimension="voltage"/>
-    <Parameter name="C_m_tau"/>
+    <Parameter name="C_m_tau" dimension="dimensionless"/>
     <Parameter name="A_m_tau" dimension="per_time"/>
     <Parameter name="v0_m_tau1" dimension="voltage"/>
     <Parameter name="v0_m_tau2" dimension="voltage"/>
     <Parameter name="k_m_tau1" dimension="voltage"/>
     <Parameter name="k_m_tau2" dimension="voltage"/>
-    <Parameter name="C_h_tau"/>
+    <Parameter name="C_h_tau" dimension="dimensionless"/>
     <Parameter name="A_h_tau" dimension="per_time"/>
     <Parameter name="v0_h_tau1" dimension="voltage"/>
     <Parameter name="v0_h_tau2" dimension="voltage"/>
@@ -31,10 +31,10 @@
     <AnalogReceivePort name="v" dimension="voltage"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     
-      <StateVariable name="m">
+      <StateVariable name="m" dimension="dimensionless">
         <Initial>m_inf</Initial>
       </StateVariable>
-      <StateVariable name="h">
+      <StateVariable name="h" dimension="dimensionless">
         <Initial>h_inf</Initial>
       </StateVariable>
       <Regime name="default">

@@ -10,12 +10,12 @@
         <EventPort mode="recv" name="wSpike" dimension="conductanceDensity"/>
         <AnalogSendPort name="g" dimension="conductanceDensity"/>
         
-            <StateVariable name="g1">
+            <StateVariable name="g1" dimension="dimensionless">
                 <Initial>
                     <Value units="S/cm^2">0</Value>
                 </Initial>
             </StateVariable>
-            <StateVariable name="g2">
+            <StateVariable name="g2" dimension="dimensionless">
                 <Initial>
                     <Value units="S/cm^2">0</Value>
                 </Initial>

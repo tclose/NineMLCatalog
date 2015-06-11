@@ -20,7 +20,7 @@
     <AnalogReceivePort name="temperature" dimension="temperature"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     
-      <StateVariable name="m">
+      <StateVariable name="m" dimension="dimensionless">
         <Initial>m_inf</Initial>
       </StateVariable>
       <Alias name="g">

@@ -26,10 +26,10 @@
     <AnalogReceivePort name="v" dimension="voltage"/>
     <AnalogSendPort name="g" dimension="conductanceDensity"/>
     
-      <StateVariable name="m">
+      <StateVariable name="m" dimension="dimensionless">
         <Initial>m_inf</Initial>
       </StateVariable>
-      <StateVariable name="h">
+      <StateVariable name="h" dimension="dimensionless">
         <Initial>h_inf</Initial>
       </StateVariable>
       <Alias name="g">

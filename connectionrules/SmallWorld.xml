@@ -41,4 +41,6 @@
       </un:NormalDistribution>
     </RandomVariable>
   </ConnectionRule>
+  <Dimension name="dimensionless"/>
+  <Unit name="unitless" dimension="dimensionless" power="0"/>
 </NineML>

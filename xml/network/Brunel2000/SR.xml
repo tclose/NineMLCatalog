@@ -36,15 +36,17 @@
           <SingleValue>0.0</SingleValue>
         </Initial>
         <Initial units="mV" name="v">
-          <Component name="uniform_rest_to_threshold">
-            <Definition url="../../randomdistribution/Uniform.xml">UniformDistribution</Definition>
-            <Property units="unitless" name="maximum">
-              <SingleValue>20.0</SingleValue>
-            </Property>
-            <Property units="unitless" name="minimum">
-              <SingleValue>0.0</SingleValue>
-            </Property>
-          </Component>
+          <RandomValue>
+            <Component name="uniform_rest_to_threshold">
+              <Definition url="../../randomdistribution/Uniform.xml">UniformDistribution</Definition>
+              <Property units="unitless" name="maximum">
+                <SingleValue>20.0</SingleValue>
+              </Property>
+              <Property units="unitless" name="minimum">
+                <SingleValue>0.0</SingleValue>
+              </Property>
+            </Component>
+          </RandomValue>
         </Initial>
       </Component>
     </Cell>
@@ -105,12 +107,14 @@
           <SingleValue>20000.0</SingleValue>
         </Property>
         <Initial units="ms" name="t_next">
-          <Component name="exponential_beta">
-            <Definition url="../../randomdistribution/Exponential.xml">ExponentialDistribution</Definition>
-            <Property units="unitless" name="rate">
-              <SingleValue>0.05</SingleValue>
-            </Property>
-          </Component>
+          <RandomValue>
+            <Component name="exponential_beta">
+              <Definition url="../../randomdistribution/Exponential.xml">ExponentialDistribution</Definition>
+              <Property units="unitless" name="rate">
+                <SingleValue>0.05</SingleValue>
+              </Property>
+            </Component>
+          </RandomValue>
         </Initial>
       </Component>
     </Cell>
@@ -140,15 +144,17 @@
           <SingleValue>0.0</SingleValue>
         </Initial>
         <Initial units="mV" name="v">
-          <Component name="uniform_rest_to_threshold">
-            <Definition url="../../randomdistribution/Uniform.xml">UniformDistribution</Definition>
-            <Property units="unitless" name="maximum">
-              <SingleValue>20.0</SingleValue>
-            </Property>
-            <Property units="unitless" name="minimum">
-              <SingleValue>0.0</SingleValue>
-            </Property>
-          </Component>
+          <RandomValue>
+            <Component name="uniform_rest_to_threshold">
+              <Definition url="../../randomdistribution/Uniform.xml">UniformDistribution</Definition>
+              <Property units="unitless" name="maximum">
+                <SingleValue>20.0</SingleValue>
+              </Property>
+              <Property units="unitless" name="minimum">
+                <SingleValue>0.0</SingleValue>
+              </Property>
+            </Component>
+          </RandomValue>
         </Initial>
       </Component>
     </Cell>

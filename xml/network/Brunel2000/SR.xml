@@ -81,6 +81,7 @@
         </Initial>
       </Component>
       <FromPlasticity send_port="fixed_weight" receive_port="weight"/>
+      <FromSource send_port="spike_output" receive_port="input_spike"/>
     </Response>
     <Plasticity>
       <Component name="ExcitatoryPlasticity">
@@ -186,6 +187,7 @@
         </Initial>
       </Component>
       <FromPlasticity send_port="fixed_weight" receive_port="weight"/>
+      <FromSource send_port="spike_output" receive_port="input_spike"/>
     </Response>
     <Plasticity>
       <Component name="ExternalPlasticity">
@@ -233,6 +235,7 @@
         </Initial>
       </Component>
       <FromPlasticity send_port="fixed_weight" receive_port="weight"/>
+      <FromSource send_port="spike_output" receive_port="input_spike"/>
     </Response>
     <Plasticity>
       <Component name="InhibitoryPlasticity">

@@ -4,7 +4,7 @@
   <Unit symbol="ms" dimension="time" power="-3"/>
   <Unit symbol="per_s" dimension="per_time" power="0"/>
   <ComponentClass name="Poisson">
-    <EventSendPort name="spikeOutput"/>
+    <EventSendPort name="spike_output"/>
     <Parameter dimension="per_time" name="rate"/>
     <Dynamics>
       <Constant units="ms" name="one_ms">1.0</Constant>
@@ -15,7 +15,7 @@
           <Trigger>
             <MathInline>t &gt; t_next</MathInline>
           </Trigger>
-          <OutputEvent port="spikeOutput"/>
+          <OutputEvent port="spike_output"/>
           <StateAssignment variable="t_next">
             <MathInline>one_ms*random.exponential(thousand_per_second/rate) + t</MathInline>
           </StateAssignment>

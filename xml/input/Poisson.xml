@@ -17,7 +17,7 @@
           </Trigger>
           <OutputEvent port="spike_output"/>
           <StateAssignment variable="t_next">
-            <MathInline>one_ms*random.exponential(thousand_per_second/rate) + t</MathInline>
+            <MathInline>one_ms*random.exponential(rate/thousand_per_second) + t_next</MathInline>
           </StateAssignment>
         </OnCondition>
       </Regime>

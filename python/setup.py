@@ -5,15 +5,13 @@ from setuptools import setup
 
 
 try:
-    os.symlink('../catalog', 'catalog')
+    os.symlink('../xml', 'catalog')
     setup(
         name="ninemlcatalog",
         version="1.0",
         py_modules='ninemlcatalog',
         package_data={'ninemlcatalog': ['catalog']},
-        author=("Thomas G. Close, Alex J. Cope, Erik De Schutter,
-                "Andrew P. Davison, Jochen Eppler, Ivan Raikov,"
-                "Paul Richmond"),
+        author=("Thomas G. Close"),
         author_email="nineml-users@incf.org",
         description=(
             "A collection of 9ML models and basic Python functions for "
@@ -34,4 +32,4 @@ try:
         tests_require=['nose']
     )
 finally:
-    os.remove('catalog')
+    os.unlink('catalog')

@@ -9,7 +9,7 @@ try:
     setup(
         name="ninemlcatalog",
         version="1.0",
-        py_modules='ninemlcatalog',
+        packages=['ninemlcatalog'],
         package_data={'ninemlcatalog': ['catalog']},
         author=("Thomas G. Close"),
         author_email="nineml-users@incf.org",

@@ -6,7 +6,7 @@ root = os.path.abspath(os.path.join(os.path.dirname(__file__), 'catalog'))
 # and catalog has been linked inside the package directory, else use the one
 # in the repo root.
 if not os.path.exists(root):
-    root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..',
+    root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
                                         'xml'))
 
 

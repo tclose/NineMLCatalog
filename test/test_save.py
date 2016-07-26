@@ -16,7 +16,7 @@ class TestSave(TestCase):
         self.assertEqual(liaf_doc, reloaded_doc)
 
     def test_brunel_round_trip(self):
-        path = 'network/Brunel2000/SR'
+        path = 'network/brunel2000/SR'
         brunel = load(path)
         save(brunel, path)
         reloaded_brunel = load(path)

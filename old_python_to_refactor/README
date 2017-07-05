@@ -1,0 +1,9 @@
+Old Python Models to Refactor
+-----------------------------
+
+This directory contains example models in very old nineml-python prototype code.
+They have not been tested for correct dynamics (at least not by me) and will
+not work with any of the released nineml-python code, so will need to be
+refactored before they can be used. However, they are included here for
+future reference just in case they prove useful in the design of new versions
+of these models. 
